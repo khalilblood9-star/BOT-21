@@ -23,5 +23,30 @@ async def playfile(ctx):
         await ctx.send(file=discord.File(file_path))
     else:
         await ctx.send("File not found!")
+        # bot.py
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Bot is alive!"
+
+# keep Flask running
+import threading
+threading.Thread(target=lambda: app.run(host="0.0.0.0", port=8000)).start()
+
+# ثم Discord bot
+import discord
+from discord.ext import commands
+import os
+
+bot = commands.Bot(command_prefix="!")
+
+@bot.event
+async def on_ready():
+    print(f"Logged in as {bot.user}")
+
+bot.run(os.getenv("DISCORD_TOKEN"))
+
 
 bot.run(os.getenv("MTQ2MDc1NTI1MjU1Mzk3Mzk5Ng.GJHgkc._mzpbiDmoVT_kPKDdcQr_QsmMCzofEOJDr6Jsk"))
