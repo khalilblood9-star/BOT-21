@@ -46,7 +46,4 @@ bot = commands.Bot(command_prefix="!")
 async def on_ready():
     print(f"Logged in as {bot.user}")
 
-bot.run(os.getenv("DISCORD_TOKEN"))
-
-
 bot.run(os.getenv("MTQ2MDc1NTI1MjU1Mzk3Mzk5Ng.GJHgkc._mzpbiDmoVT_kPKDdcQr_QsmMCzofEOJDr6Jsk"))
