@@ -24,4 +24,4 @@ async def playfile(ctx):
     else:
         await ctx.send("File not found!")
 
-bot.run(os.getenv("DISCORD_TOKEN"))
+bot.run(os.getenv("MTQ2MDc1NTI1MjU1Mzk3Mzk5Ng.GJHgkc._mzpbiDmoVT_kPKDdcQr_QsmMCzofEOJDr6Jsk"))
